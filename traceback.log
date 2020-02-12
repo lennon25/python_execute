@@ -1,0 +1,15 @@
+test_80_100 (__main__.StudentTest) ... ok
+test_invalid (__main__.StudentTest) ... FAIL
+
+======================================================================
+FAIL: test_invalid (__main__.StudentTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/lennon/Desktop/Project/python_work/Python_execute/traceback_test.py", line 36, in test_invalid
+    s1.get_grade()
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=1)

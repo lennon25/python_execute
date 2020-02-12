@@ -1,0 +1,40 @@
+
+# 表示url属性值
+url: http://www.wolfcode.cn
+# 表示server.host属性的值
+server:
+  host: http://www.wolfcode.cn
+# 数组, 表示server为[1,2,3]
+server:
+  - 120.168.117.21
+  - 120.168.117.22
+  - 120.168.117.23
+# 常量
+pi: 3.14
+hasChild: true
+name: "Hi YAML"
+
+# 复杂数组的例子
+companies:
+  - 
+    id: 1
+    name: company1
+    price: 200W
+  - 
+    id: 2
+    name: company2
+    price: 500W
+
+
+languages:
+  - Ruby
+  - Perl
+  - Python
+websites:
+  YAML: yaml.org
+  Ruby: ruby-lang.org
+  Python: python.org
+  Perl: use.perl.org
+  
+
+

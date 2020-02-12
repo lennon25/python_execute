@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>w</title>
+	<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<div>
+			<input type="text" id="txt"/>
+			<input type="button" id="btn" value="提交" onclick="sendMsg();"/>
+			<input type ="button" id="close" value="关闭连接" onclick="closeConn();"/>
+		</div>
+		<div id="content"></div>
+
+<script type="text/javascript">
+	var socket = new Websocket(ws"127.0.0.1:8080");
+
+	socket.onopen = function(){
+		var newTag = document.createElement("div");
+		newTag.innerHTML = "Connect success"
+		document.getElementById("content").appendChild(newTag)
+	};
+
+	socket.onmessage = function(envent){
+		var response = event.data;
+		var newTag = document.createElement("div")
+		newTag.innerHTML = response;
+		document.getElementById("connect").appendChild(newTag);
+	};
+	socket.onclose = function(envent){
+		var newTag = document.createElement("div")
+		newTag.innerHTML = "close connection";
+		document.getElementById("content").appendChild(newTag)
+	};
+	function sendMsg(){
+		var txt = document.getElementById("txt");
+		socket.send(txt.value);
+		txt.value = "";
+	}
+	function closeConn(){
+		socket.close();
+		var newTag = document.createElement("div");
+		newTag.innerHTML = "close connection";
+		document.getElementById("content").appendChild(newTag);
+	}
+
+</script>
+</body>
+</html>
+</head>
+</html>
+
+
+
+
